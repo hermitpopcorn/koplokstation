@@ -1,0 +1,29 @@
+<template name="scraper_router_connectedDevices">
+  <div class="panel panel-default">
+    <div class="panel-heading">Devices Connected to Home Network</div>
+    <table class="connected-devices table table-bordered">
+      <thead>
+        <tr>
+          <th>IP</th>
+          <th>MAC Address</th>
+          <th>Hostname</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if connectedDevices}}
+          {{#each device in connectedDevices}}
+            <tr>
+              <td>{{ device.ip }}</td>
+              <td>{{ device.mac }}</td>
+              <td>{{ device.host }}</td>
+            </tr>
+          {{/each}}
+        {{else}}
+        <tr>
+          <td colspan="3" class="text-center">Cannot connect to router.</td>
+        </tr>
+        {{/if}}
+      </tbody>
+    </table>
+  </div>
+</template>

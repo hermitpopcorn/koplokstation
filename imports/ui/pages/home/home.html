@@ -1,0 +1,14 @@
+<template name="App_home">
+  <div class="content" id="home">
+    <div class="container">
+      {{> scraper_router_connectedDevices}}
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Server Controls</div>
+        <div class="panel-body">
+          {{> beepButton}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
