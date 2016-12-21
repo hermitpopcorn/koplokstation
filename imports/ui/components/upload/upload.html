@@ -1,0 +1,28 @@
+<template name="uploadFile">
+  <input class="upload" type="file">
+
+  <table class="table table-condensed">
+    <tbody>
+      {{#if ($gt getFileCount 0) }}
+        {{#each getFiles}}
+          <tr {{isUploading(isUploaded)}}>
+            <td style="vertical-align:middle">
+            {{#if isUploaded}}
+              {{formatDate uploadedAt}}
+            {{else}}
+              Uploading...
+            {{/if}}
+            </td>
+            <td style="vertical-align:middle">{{original.name}}</td>
+            <td style="vertical-align:middle" class="text-center"><a class="btn btn-primary btn-sm" href="{{url}}" rel="external">link</a></td>
+            <td style="vertical-align:middle" class="text-center"><button class="btn btn-sm btn-danger" id="deleteFile">delete</button></td>
+          </tr>
+        {{/each}}
+      {{else}}
+        <tr>
+          <td class="text-center">No files uploaded.</td>
+        </tr>
+      {{/if}}
+    </tbody>
+  </table>
+</template>

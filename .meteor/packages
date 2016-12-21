@@ -28,3 +28,6 @@ izzilab:shelljs
 froatsnook:request
 twbs:bootstrap
 jabbslad:basic-auth
+cfs:standard-packages
+cfs:filesystem
+raix:handlebar-helpers
