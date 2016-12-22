@@ -18,4 +18,20 @@ Template.beepButton.events({
       }
     });
   },
+
+  'click button.mute'(event, instance) {
+    Meteor.call('beeper.mute', (error) => {
+      if (error) {
+        alert(error.error);
+      }
+    });
+  },
+
+  'click button.unmute'(event, instance) {
+    Meteor.call('beeper.unmute', (error) => {
+      if (error) {
+        alert(error.error);
+      }
+    });
+  }
 });
