@@ -2,23 +2,23 @@
 
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
-import { User } from './user.js';
+import { Users } from './users.js';
 import bcrypt from 'bcrypt';
 
 Meteor.methods({
-  'user.isEmpty'() {
-    let count = User.find().count();
+  'users.isEmpty'() {
+    let count = Users.find().count();
 
     return count < 1;
   },
 
-  'user.insert'(username, password) {
+  'users.insert'(username, password) {
     check(username, String);
     check(password, String);
 
     var crypted = bcrypt.hashSync(password, 8);
 
-    return User.insert({
+    return Users.insert({
       'username': username,
       'password': crypted
     }, function(err, inserted) {

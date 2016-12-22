@@ -8,5 +8,5 @@ import '../../api/terminal/methods.js';
 
 import '../../api/files/files.js';
 
-import '../../api/user/user.js';
-import '../../api/user/methods.js';
+import '../../api/users/users.js';
+import '../../api/users/methods.js';
