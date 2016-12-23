@@ -27,7 +27,6 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 izzilab:shelljs
 froatsnook:request
 twbs:bootstrap
-jabbslad:basic-auth
 cfs:standard-packages
 cfs:filesystem
 raix:handlebar-helpers
