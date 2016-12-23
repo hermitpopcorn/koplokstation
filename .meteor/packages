@@ -31,3 +31,6 @@ jabbslad:basic-auth
 cfs:standard-packages
 cfs:filesystem
 raix:handlebar-helpers
+jagi:astronomy
+jagi:astronomy-slug-behavior
+jagi:astronomy-timestamp-behavior

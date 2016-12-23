@@ -10,3 +10,7 @@ import '../../api/files/files.js';
 
 import '../../api/users/users.js';
 import '../../api/users/methods.js';
+
+import '../../api/blog/posts/posts.js';
+import '../../api/blog/posts/methods.js';
+import '../../api/blog/posts/publications.js';
