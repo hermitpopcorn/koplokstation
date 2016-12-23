@@ -6,6 +6,7 @@ This app has no real function; it's here for no reason and looks really cringy. 
 
 ### Components
 
+- Login using accounts-password to access server control stuff (listed as the following points).
 - A web scraper to get the list of connected devices from the router's web interface page, for whatever function it may possibly serve.
 - A button that can send beep and **TELOLET noises** to the server by making it play the sound files using mpg123. I figured that I can use this to spook my mother from outside the house.
 - A file upload system using CollectionFS for storing stuff on the server.

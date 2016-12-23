@@ -1,0 +1,46 @@
+<template name="Auth_login">
+  <div class="content">
+    <div class="container">
+      {{#if alert }}
+      <div class="alert alert-{{ alert.type }}" role="alert">
+        {{ alert.message }}
+      </div>
+      {{/if}}
+      {{#unless currentUser}}
+      <form class="login">
+        <div class="panel panel-default">
+          <div class="panel-heading">Login Form</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Log in</button>
+            <div style="float:right">
+              <a class="btn btn-default" href="/">Pussy out</a>
+            </div>
+          </div>
+        </div>
+      </form>
+      {{else}}
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="text-center">
+            {{#unless isRedirect}}
+            <p><b>You are logged in.</b></p>
+            <a class="btn btn-default" href="/">Go back home</a>
+            <a class="btn btn-default" href="/server">Server Controls</a>
+            {{else}}
+            <p><b>You will be redirected in a few moment...</b></p>
+            {{/unless}}
+          </div>
+        </div>
+      </div>
+      {{/unless}}
+    </div>
+  </div>
+</template>

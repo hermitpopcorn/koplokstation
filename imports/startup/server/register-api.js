@@ -8,9 +8,6 @@ import '../../api/server-control/terminal/methods.js';
 
 import '../../api/server-control/files/files.js';
 
-import '../../api/server-control/users/users.js';
-import '../../api/server-control/users/methods.js';
-
 import '../../api/blog/posts/posts.js';
 import '../../api/blog/posts/methods.js';
 import '../../api/blog/posts/publications.js';

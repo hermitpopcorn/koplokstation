@@ -33,3 +33,5 @@ raix:handlebar-helpers
 jagi:astronomy
 jagi:astronomy-slug-behavior
 jagi:astronomy-timestamp-behavior
+accounts-password
+session
