@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { HttpBasicAuth } from 'meteor/jabbslad:basic-auth';
-import { Users } from '../../api/users/users.js';
+import { Users } from '../../api/server-control/users/users.js';
 import bcrypt from 'bcrypt';
 
 var basicAuth = new HttpBasicAuth(function(username, password) {

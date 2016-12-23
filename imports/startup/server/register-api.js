@@ -1,15 +1,15 @@
 // Register your apis here
 
-import '../../api/beeper/methods.js';
+import '../../api/server-control/beeper/methods.js';
 
-import '../../api/scraper/methods.js';
+import '../../api/server-control/scraper/methods.js';
 
-import '../../api/terminal/methods.js';
+import '../../api/server-control/terminal/methods.js';
 
-import '../../api/files/files.js';
+import '../../api/server-control/files/files.js';
 
-import '../../api/users/users.js';
-import '../../api/users/methods.js';
+import '../../api/server-control/users/users.js';
+import '../../api/server-control/users/methods.js';
 
 import '../../api/blog/posts/posts.js';
 import '../../api/blog/posts/methods.js';
