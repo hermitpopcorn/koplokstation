@@ -1,6 +1,7 @@
 <template name="Blog_components_posts">
   {{#each posts}}
   <div class="post">
+    <span class="publish-date">{{formatDate publishedAt}}</span>
     <h1>{{title}}</h1>
     <p>
       {{content}}

@@ -8,6 +8,6 @@ Template.Blog_components_posts.onCreated(function() {
 
 Template.Blog_components_posts.helpers({
   posts() {
-    return Post.find();
+    return Post.find({}, { sort: { publishedAt: -1 } });
   },
 });
