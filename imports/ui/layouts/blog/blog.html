@@ -18,12 +18,16 @@
             <!-- nothing here yet -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="/blog/admin">Manage Blog</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other parts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/server">Server Controls</a></li>
               </ul>
             </li>
+            {{#if loggedIn}}
+            <li><a class="logout" href="/blog/admin"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+            {{/if}}
           </ul>
         </div>
       </div>

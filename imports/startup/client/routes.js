@@ -14,10 +14,13 @@ import '/imports/ui/pages/server-control/terminal/terminal.js';
 
 import '/imports/ui/layouts/blog/blog.js';
 import '/imports/ui/pages/blog/home/home.js';
+import '/imports/ui/pages/blog/admin/dashboard/dashboard.js';
 
 BlazeLayout.setRoot('body');
 
 // Set up all routes in the app
+
+// Default page is blog home
 FlowRouter.route('/', {
   name: 'Blog.home',
   action() {
@@ -25,6 +28,29 @@ FlowRouter.route('/', {
   },
 });
 
+// Blog
+// Blog home
+FlowRouter.route('/blog', {
+  name: 'Blog.home',
+  action() {
+    BlazeLayout.render('Blog_body', { main: 'Blog_home' });
+  },
+});
+// Blog management
+FlowRouter.route('/blog/admin', {
+  name: 'Blog.manage',
+  action() {
+    BlazeLayout.render('Blog_body', { main: 'Blog_admin_dashboard' });
+  },
+  triggersEnter: [function(context, redirect) {
+    if(!Meteor.userId()) {
+      Session.set('loginRedirect', '/blog/admin');
+      redirect('/login');
+    }
+  }],
+});
+
+// Server Control
 FlowRouter.route('/server', {
   name: 'ServerControl.home',
   action() {
@@ -38,6 +64,7 @@ FlowRouter.route('/server', {
   }],
 });
 
+// Login page
 FlowRouter.route('/login', {
   name: 'Auth.login',
   action() {
@@ -45,6 +72,7 @@ FlowRouter.route('/login', {
   },
 });
 
+// 404
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });

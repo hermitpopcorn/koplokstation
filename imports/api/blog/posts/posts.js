@@ -6,6 +6,7 @@ export const Post = Class.create({
   name: 'Post',
   collection: Posts,
   fields: {
+    _id: Object,
     title: String,
     content: String,
     publishedAt: Date
