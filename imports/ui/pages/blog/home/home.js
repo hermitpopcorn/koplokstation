@@ -1,2 +1,2 @@
 import './home.html';
-import '../../../components/blog/posts/posts.js';
+import '/imports/ui/components/blog/posts/posts.js';

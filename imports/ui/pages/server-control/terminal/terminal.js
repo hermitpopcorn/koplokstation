@@ -1,6 +1,6 @@
 import './terminal.html';
 
-import '../../../components/server-control/terminal-access/terminal-access.js';
+import '/imports/ui/components/server-control/terminal-access/terminal-access.js';
 
 import { Meteor } from 'meteor/meteor';
 

@@ -4,16 +4,16 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
 
 // Import needed templates
-import '../../ui/layouts/body/body.js';
-import '../../ui/pages/not-found/not-found.js';
+import '/imports/ui/layouts/body/body.js';
+import '/imports/ui/pages/not-found/not-found.js';
 
-import '../../ui/pages/auth/login/login.js';
+import '/imports/ui/pages/auth/login/login.js';
 
-import '../../ui/pages/server-control/home/home.js';
-import '../../ui/pages/server-control/terminal/terminal.js';
+import '/imports/ui/pages/server-control/home/home.js';
+import '/imports/ui/pages/server-control/terminal/terminal.js';
 
-import '../../ui/layouts/blog/blog.js';
-import '../../ui/pages/blog/home/home.js';
+import '/imports/ui/layouts/blog/blog.js';
+import '/imports/ui/pages/blog/home/home.js';
 
 BlazeLayout.setRoot('body');
 
