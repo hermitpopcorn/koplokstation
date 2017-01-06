@@ -2,9 +2,12 @@
   <link rel="stylesheet" href="/css/paper.bootswatch.css">
   <section class="content">
     <div class="container">
-      <h1>Blog Management</h1>
+      <h3>Blog Management</h3>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="/blog/admin/posts">Posts</a></li>
+      </ul>
       <div class="panel panel-default">
-        <div class="panel-heading">Blog Posts</div>
+        <div class="panel-heading"><a class="anchor" id="posts-list">Blog Posts</a></div>
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
@@ -32,24 +35,26 @@
         </table>
       </div>
 
-      <hr/>
+      <div class="panel panel-default">
+        <div class="panel-heading"><a class="anchor" id="post-editor">Post Editor</a></div>
+        <div class="panel-body">
+          {{#with postData}}
+          <form>
+            <div class="form-group">
+              <input id="title" type="text" class="form-control" value="{{title}}" placeholder="Post title" />
+            </div>
 
-      {{#with postData}}
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input id="title" type="text" class="form-control" value="{{title}}" />
-        </div>
+            <div class="form-group">
+              <textarea id="editor">{{ content }}</textarea>
+            </div>
 
-        <div class="form-group">
-          <textarea id="editor">{{ content }}</textarea>
+            <div class="form-group">
+              <button class="btn btn-primary save">Save</button>
+            </div>
+          </form>
+          {{/with}}
         </div>
-
-        <div class="form-group">
-          <button class="btn btn-primary save">Save</button>
-        </div>
-      </form>
-      {{/with}}
+      </div>
     </div>
   </section>
 </template>

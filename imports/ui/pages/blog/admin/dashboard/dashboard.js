@@ -32,6 +32,7 @@ Template.Blog_admin_dashboard.events({
     Template.instance.postData = new ReactiveVar(new Post());
     instance.find('input#title').value = "";
     CKEDITOR.instances.editor.setData("");
+    window.location.href = "#post-editor";
   },
 
   'click button.save'(event, instance) {
@@ -48,6 +49,7 @@ Template.Blog_admin_dashboard.events({
         swal("Post Saving Fail", "I guess your writing sucks or smth", "error");
       } else {
         swal("Post Saved", "Done!", "success");
+        window.location.href = "#posts-list";
       }
     });
   },
@@ -55,6 +57,7 @@ Template.Blog_admin_dashboard.events({
   'click button.edit-post'(event, instance) {
     Template.instance.postData.set(Post.findOne({ _id: new Meteor.Collection.ObjectID(event.target.id) }));
     CKEDITOR.instances.editor.setData(Template.instance.postData.get().content);
+    window.location.href = "#post-editor";
   },
 
   'click button.delete-post'(event, instance) {

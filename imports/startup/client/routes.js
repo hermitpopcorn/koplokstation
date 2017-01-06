@@ -37,7 +37,7 @@ FlowRouter.route('/blog', {
   },
 });
 // Blog management
-FlowRouter.route('/blog/admin', {
+FlowRouter.route(['/blog/admin', '/blog/admin/posts'], {
   name: 'Blog.manage',
   action() {
     BlazeLayout.render('Blog_body', { main: 'Blog_admin_dashboard' });
